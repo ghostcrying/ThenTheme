@@ -13,22 +13,13 @@ public protocol ThenThemeConfig {
     var identifier: String { get }
 }
 
-extension ThenThemeConfig {
-    
-    static func == (lhs: Self, rhs: Self) -> Bool {
-        return lhs.identifier == rhs.identifier
-    }
-}
-
-
 /// Manager your current theme
 public class ThenTheme {
     
     /// The singleton
     public static let shared = ThenTheme()
     
-    /// This is the current theme. Set it at app launch and whenever you want
-    /// to change theme
+    /// This is the current theme. Set it at app launch and whenever you want to change theme
     public var current: ThenThemeConfig? {
         didSet {
             NotificationCenter.default.post(name: Notification.Name.themeDidChange, object: self)
@@ -38,5 +29,5 @@ public class ThenTheme {
 }
 
 extension Notification.Name {
-    static let themeDidChange = Notification.Name("Themes.ThemeDidChangeNotification")
+    static let themeDidChange = Notification.Name("Then.Themes.ThemeDidChangeNotification")
 }

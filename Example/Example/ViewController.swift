@@ -26,12 +26,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Root"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "嘿嘿", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.tintColor = UIColor.red
+        navigationController?.navigationBar.barTintColor = UIColor.orange
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16),
+            NSAttributedString.Key.foregroundColor: UIColor.red,
+        ]
         view.addSubview(textButton)
         NSLayoutConstraint.activate([
             textButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             textButton.heightAnchor.constraint(equalToConstant: 50),
             textButton.widthAnchor.constraint(equalToConstant: 150),
-            textButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 100)
+            textButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 200)
         ])
         
         // 当前
@@ -46,6 +54,12 @@ class ViewController: UIViewController {
             $0.button.backgroundColor = $1.buttonBackgroundColor
             $0.textButton.setTitleColor($1.textColor, for: .normal)
             $0.imgview.image = UIImage(systemName: $1.systemImage)
+            /// 判定当前
+            if $1.identifier == ThemStyle.light.rawValue {
+                print("Current Theme Light")
+            } else {
+                print("Current Theme Dark")
+            }
         }
     }
 
@@ -64,5 +78,16 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    // MARK: - Actions
+    @IBAction func pushClick(_ sender: UIButton) {
+        navigationController?.pushViewController(PushController(), animated: true)
+    }
+    
+    @IBAction func presentClick(_ sender: UIButton) {
+        let vc = BaseNaviController(rootViewController: PresentController())
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
 }
-

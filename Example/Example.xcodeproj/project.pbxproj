@@ -16,6 +16,8 @@
 		9E2C2AAE2A24779C00ECF66A /* ThenTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2C2AAA2A24777D00ECF66A /* ThenTheme.framework */; };
 		9E2C2AAF2A24779C00ECF66A /* ThenTheme.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2C2AAA2A24777D00ECF66A /* ThenTheme.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9E2C2AB22A2477CA00ECF66A /* ExampleThemeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C2AB12A2477CA00ECF66A /* ExampleThemeConfig.swift */; };
+		9EA9CFC92A36FDD30079B491 /* PresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA9CFC82A36FDD30079B491 /* PresentController.swift */; };
+		9EA9CFCC2A36FDDC0079B491 /* PushController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA9CFCB2A36FDDC0079B491 /* PushController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		9E2C2A9E2A24774900ECF66A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E2C2AA42A24777D00ECF66A /* ThenTheme.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThenTheme.xcodeproj; path = ../ThenTheme.xcodeproj; sourceTree = "<group>"; };
 		9E2C2AB12A2477CA00ECF66A /* ExampleThemeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleThemeConfig.swift; sourceTree = "<group>"; };
+		9EA9CFC82A36FDD30079B491 /* PresentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentController.swift; sourceTree = "<group>"; };
+		9EA9CFCB2A36FDDC0079B491 /* PushController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 				9E2C2A902A24774800ECF66A /* AppDelegate.swift */,
 				9E2C2A922A24774800ECF66A /* SceneDelegate.swift */,
 				9E2C2A942A24774800ECF66A /* ViewController.swift */,
+				9EA9CFCB2A36FDDC0079B491 /* PushController.swift */,
+				9EA9CFC82A36FDD30079B491 /* PresentController.swift */,
 				9E2C2AB12A2477CA00ECF66A /* ExampleThemeConfig.swift */,
 				9E2C2A962A24774800ECF66A /* Main.storyboard */,
 				9E2C2A992A24774900ECF66A /* Assets.xcassets */,
@@ -205,8 +211,10 @@
 			files = (
 				9E2C2AB22A2477CA00ECF66A /* ExampleThemeConfig.swift in Sources */,
 				9E2C2A952A24774800ECF66A /* ViewController.swift in Sources */,
+				9EA9CFC92A36FDD30079B491 /* PresentController.swift in Sources */,
 				9E2C2A912A24774800ECF66A /* AppDelegate.swift in Sources */,
 				9E2C2A932A24774800ECF66A /* SceneDelegate.swift in Sources */,
+				9EA9CFCC2A36FDDC0079B491 /* PushController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,6 +5,7 @@
 //  Created by 陈卓 on 2023/5/29.
 //
 
+import UIKit
 import Foundation
 
 /// Anything that wants to use theme
@@ -18,7 +19,7 @@ public extension ThemeCompatible {
     ///
     /// Usage
     /// ```
-    /// textField.apply(MyTheme.self) {
+    /// textField.apply(CustomTheme.self) {
     ///   $0.textColor = $1.mainColor
     ///   $0.font = $1.textFont
     /// }
@@ -37,7 +38,7 @@ public extension ThemeCompatible {
                   let config = config as? T else {
                 return
             }
-            apply(compatible, config)
+            UIView.animate(withDuration: 0.25) { apply(compatible, config) }
         }
     }
     

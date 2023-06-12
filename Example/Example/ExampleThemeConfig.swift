@@ -8,18 +8,25 @@
 import UIKit
 import ThenTheme
 
+enum ThemStyle: String, CaseIterable {
+    case light
+    case dark
+}
+
 struct ThemeConfigs {
-    static let light = ExampleThemeConfig(identifier: "light",
-                                          mainColor: UIColor.groupTableViewBackground,
+    static let light = ExampleThemeConfig(identifier: ThemStyle.light.rawValue,
+                                          mainColor: UIColor.white,
                                           textColor: UIColor.black,
                                           buttonBackgroundColor: UIColor.clear,
-                                          systemImage: "person.2")
+                                          systemImage: "person.2",
+                                          navigationbBarBackgroundColor: UIColor.blue.withAlphaComponent(0.5))
     
-    static let dark = ExampleThemeConfig(identifier: "dark",
-                                          mainColor: UIColor.black,
+    static let dark = ExampleThemeConfig(identifier: ThemStyle.dark.rawValue,
+                                          mainColor: UIColor.darkGray,
                                           textColor: UIColor.white,
                                           buttonBackgroundColor: UIColor.clear,
-                                          systemImage: "shareplay")
+                                          systemImage: "shareplay",
+                                         navigationbBarBackgroundColor: UIColor.red.withAlphaComponent(0.5))
 }
 
 struct ExampleThemeConfig: ThenThemeConfig {
@@ -34,12 +41,15 @@ struct ExampleThemeConfig: ThenThemeConfig {
     
     let buttonBackgroundColor: UIColor
     
-    init(identifier: String, mainColor: UIColor, textColor: UIColor, buttonBackgroundColor: UIColor, systemImage: String) {
+    let navigationbBarBackgroundColor: UIColor
+    
+    init(identifier: String, mainColor: UIColor, textColor: UIColor, buttonBackgroundColor: UIColor, systemImage: String, navigationbBarBackgroundColor: UIColor) {
         self.identifier = identifier
         self.mainColor = mainColor
         self.textColor = textColor
         self.buttonBackgroundColor = buttonBackgroundColor
         self.systemImage = systemImage
+        self.navigationbBarBackgroundColor = navigationbBarBackgroundColor
     }
     
 }
