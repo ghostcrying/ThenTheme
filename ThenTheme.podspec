@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ThenTheme"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Then Theme Manager"
   s.description  = <<-EOS
   😂
@@ -19,6 +19,8 @@ Pod::Spec.new do |s|
   s.swift_version = '5.0'
   
   s.cocoapods_version = '>= 1.4.0'
+  
+  s.frameworks = 'Foundation'
   
 end
 

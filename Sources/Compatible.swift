@@ -5,7 +5,11 @@
 //  Created by 陈卓 on 2023/5/29.
 //
 
+#if os(macOS)
+import Cocoa
+#else
 import UIKit
+#endif
 import Foundation
 
 /// Anything that wants to use theme
@@ -38,7 +42,11 @@ public extension ThemeCompatible {
                   let config = config as? T else {
                 return
             }
+            #if os(macOS)
+            NSAnimationContext.runAnimationGroup { _ in apply(compatible, config) }
+            #else
             UIView.animate(withDuration: 0.25) { apply(compatible, config) }
+            #endif
         }
     }
     

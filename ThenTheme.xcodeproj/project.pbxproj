@@ -19,6 +19,7 @@
 		9E2C2A612A24578000ECF66A /* Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handler.swift; sourceTree = "<group>"; };
 		9E2C2A632A2457A900ECF66A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		9E2C2A672A24584B00ECF66A /* Compatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compatible.swift; sourceTree = "<group>"; };
+		9E48C89F2A4933D8005C260D /* ThenTheme.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ThenTheme.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +36,7 @@
 		9E2C2A3C2A2456DC00ECF66A = {
 			isa = PBXGroup;
 			children = (
+				9E48C89F2A4933D8005C260D /* ThenTheme.podspec */,
 				9E2C2A5E2A24574700ECF66A /* Sources */,
 				9E2C2A472A2456DC00ECF66A /* Products */,
 			);
