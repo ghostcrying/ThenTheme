@@ -13,17 +13,17 @@
 		9E2C2A982A24774800ECF66A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2C2A962A24774800ECF66A /* Main.storyboard */; };
 		9E2C2A9A2A24774900ECF66A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E2C2A992A24774900ECF66A /* Assets.xcassets */; };
 		9E2C2A9D2A24774900ECF66A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2C2A9B2A24774900ECF66A /* LaunchScreen.storyboard */; };
-		9E2C2AAE2A24779C00ECF66A /* ThenTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2C2AAA2A24777D00ECF66A /* ThenTheme.framework */; };
-		9E2C2AAF2A24779C00ECF66A /* ThenTheme.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2C2AAA2A24777D00ECF66A /* ThenTheme.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9E2C2AB22A2477CA00ECF66A /* ExampleThemeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C2AB12A2477CA00ECF66A /* ExampleThemeConfig.swift */; };
+		9E48C89D2A493048005C260D /* ThenTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E48C89C2A49303A005C260D /* ThenTheme.framework */; };
+		9E48C89E2A493048005C260D /* ThenTheme.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E48C89C2A49303A005C260D /* ThenTheme.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9EA9CFC92A36FDD30079B491 /* PresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA9CFC82A36FDD30079B491 /* PresentController.swift */; };
 		9EA9CFCC2A36FDDC0079B491 /* PushController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA9CFCB2A36FDDC0079B491 /* PushController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9E2C2AA92A24777D00ECF66A /* PBXContainerItemProxy */ = {
+		9E48C89B2A49303A005C260D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9E2C2AA42A24777D00ECF66A /* ThenTheme.xcodeproj */;
+			containerPortal = 9E48C8972A49303A005C260D /* ThenTheme.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9E2C2A462A2456DC00ECF66A;
 			remoteInfo = ThenTheme;
@@ -37,7 +37,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9E2C2AAF2A24779C00ECF66A /* ThenTheme.framework in Embed Frameworks */,
+				9E48C89E2A493048005C260D /* ThenTheme.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,8 +53,8 @@
 		9E2C2A992A24774900ECF66A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E2C2A9C2A24774900ECF66A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E2C2A9E2A24774900ECF66A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E2C2AA42A24777D00ECF66A /* ThenTheme.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThenTheme.xcodeproj; path = ../ThenTheme.xcodeproj; sourceTree = "<group>"; };
 		9E2C2AB12A2477CA00ECF66A /* ExampleThemeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleThemeConfig.swift; sourceTree = "<group>"; };
+		9E48C8972A49303A005C260D /* ThenTheme.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThenTheme.xcodeproj; path = ../../ThenTheme.xcodeproj; sourceTree = "<group>"; };
 		9EA9CFC82A36FDD30079B491 /* PresentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentController.swift; sourceTree = "<group>"; };
 		9EA9CFCB2A36FDDC0079B491 /* PushController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E2C2AAE2A24779C00ECF66A /* ThenTheme.framework in Frameworks */,
+				9E48C89D2A493048005C260D /* ThenTheme.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +74,7 @@
 		9E2C2A842A24774800ECF66A = {
 			isa = PBXGroup;
 			children = (
-				9E2C2AA42A24777D00ECF66A /* ThenTheme.xcodeproj */,
+				9E48C8972A49303A005C260D /* ThenTheme.xcodeproj */,
 				9E2C2A8F2A24774800ECF66A /* Example */,
 				9E2C2A8E2A24774800ECF66A /* Products */,
 				9E2C2AAD2A24779C00ECF66A /* Frameworks */,
@@ -106,19 +106,19 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
-		9E2C2AA52A24777D00ECF66A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9E2C2AAA2A24777D00ECF66A /* ThenTheme.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		9E2C2AAD2A24779C00ECF66A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E48C8982A49303A005C260D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E48C89C2A49303A005C260D /* ThenTheme.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +170,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9E2C2AA52A24777D00ECF66A /* Products */;
-					ProjectRef = 9E2C2AA42A24777D00ECF66A /* ThenTheme.xcodeproj */;
+					ProductGroup = 9E48C8982A49303A005C260D /* Products */;
+					ProjectRef = 9E48C8972A49303A005C260D /* ThenTheme.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -182,11 +182,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9E2C2AAA2A24777D00ECF66A /* ThenTheme.framework */ = {
+		9E48C89C2A49303A005C260D /* ThenTheme.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ThenTheme.framework;
-			remoteRef = 9E2C2AA92A24777D00ECF66A /* PBXContainerItemProxy */;
+			remoteRef = 9E48C89B2A49303A005C260D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

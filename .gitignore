@@ -64,11 +64,19 @@ playground.xcworkspace
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
-Carthage/Build/
+Carthage/
+Cartfile.resolved
 
 # Accio dependency management
 Dependencies/
 .accio/
+
+# Example
+Examples/Example/Carthage/
+Examples/Example/Cartfile.resolved
+Examples/Example/Pods/
+Examples/Example/xcuserdata/
+Examples/Example/*.xcworkspace
 
 # fastlane
 #

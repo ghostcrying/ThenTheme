@@ -1,16 +1,24 @@
 Pod::Spec.new do |s|
   s.name         = "ThenTheme"
   s.version      = "0.0.1"
-  s.summary      = "Theme Manager"
+  s.summary      = "Then Theme Manager"
   s.description  = <<-EOS
+  😂
   EOS
   s.homepage     = "https://github.com/ghostcrying/ThenTheme"
   s.author       = { "ghost" => "czios1501@gmail.com" }
-  s.ios.deployment_target = '11.0'
+  s.license      = "BD"
   s.source       = { :git => "https://github.com/ghostcrying/ThenTheme.git", :tag => s.version }
-  s.source_files = "Sources/**/*"
-  s.swift_version = '5.3'
+  
+  s.ios.deployment_target = '11.0'
+  s.osx.deployment_target = '10.15'
+  s.tvos.deployment_target = '11.0'
+  
+  s.source_files = "Sources/**/*.swift"
+  
+  s.swift_version = '5.0'
+  
   s.cocoapods_version = '>= 1.4.0'
-
+  
 end
 
