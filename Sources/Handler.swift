@@ -9,18 +9,17 @@ import Foundation
 
 /// Managed by ThemeCompatible to handle theme change notification
 @objc
-@objcMembers
-class Handler: NSObject {
+@objcMembers class Handler: NSObject {
     var observer: NSObjectProtocol!
-    
+
     weak var host: ThemeCompatible?
-    
+
     var mapping = [String: (ThemeCompatible, ThenThemeConfig) -> Void]()
-    
+
     init(host: ThemeCompatible) {
         self.host = host
     }
-    
+
     func observe() {
         observer = NotificationCenter.default.addObserver(
             forName: Notification.Name.themeDidChange,
@@ -28,9 +27,10 @@ class Handler: NSObject {
             queue: OperationQueue.main,
             using: { [weak self] _ in
                 self?.handle()
-            })
+            }
+        )
     }
-    
+
     func handle() {
         guard let host = host else {
             return
@@ -43,12 +43,10 @@ class Handler: NSObject {
         }
         action(host, config)
     }
-    
+
     deinit {
         if let activeObserver = observer {
             NotificationCenter.default.removeObserver(activeObserver)
         }
     }
-    
 }
-

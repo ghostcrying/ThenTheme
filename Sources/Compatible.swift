@@ -6,18 +6,16 @@
 //
 
 #if os(macOS)
-import Cocoa
+    import Cocoa
 #else
-import UIKit
+    import UIKit
 #endif
 import Foundation
 
 /// Anything that wants to use theme
-@objc
-public protocol ThemeCompatible: AnyObject {}
+@objc public protocol ThemeCompatible: AnyObject {}
 
 public extension ThemeCompatible {
-    
     /// Specify the theme you want to use.
     /// This is called immediately and when current theme changes
     ///
@@ -36,36 +34,41 @@ public extension ThemeCompatible {
         if let config = ThenTheme.shared.current as? T {
             apply(self, config)
         }
-        
+
         themeHandler.mapping[String(describing: type.self)] = { (compatible: ThemeCompatible, config: ThenThemeConfig) in
             guard let compatible = compatible as? Self,
-                  let config = config as? T else {
+                  let config = config as? T
+            else {
                 return
             }
             #if os(macOS)
-            NSAnimationContext.runAnimationGroup { _ in apply(compatible, config) }
+                NSAnimationContext.runAnimationGroup { _ in apply(compatible, config) }
             #else
-            UIView.animate(withDuration: 0.25) { apply(compatible, config) }
+                UIView.animate(withDuration: 0.25) { apply(compatible, config) }
             #endif
         }
     }
-    
+
     fileprivate var themeHandler: Handler {
-        if let handler = objc_getAssociatedObject(self, &key) as? Handler {
+        if let handler = objc_getAssociatedObject(self, &Keys.handler) as? Handler {
+        // if let handler = withUnsafePointer(to: Keys.handler, { objc_getAssociatedObject(self, $0) }) as? Handler {
             return handler
         } else {
             let handler = Handler(host: self)
             handler.observe()
-            objc_setAssociatedObject(self, &key, handler, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            
+            objc_setAssociatedObject(self, &Keys.handler, handler, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             return handler
         }
     }
 }
 
-/// MARK: - NSObject
-@objc extension NSObject: ThemeCompatible {}
+// MARK: - NSObject
 
+@objc extension NSObject: ThemeCompatible {}
 
 // MARK: - Associated Object
 
-fileprivate var key = "theme_handler"
+struct Keys {
+    static var handler: Void?
+}
